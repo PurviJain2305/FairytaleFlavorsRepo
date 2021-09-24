@@ -4,22 +4,22 @@
 # Instructions
 
 # How to run
-###Build Spring Boot Project with Maven
+### Build Spring Boot Project with Maven
 - clone the project
 - cd FairytaleFlavors
 - mvn install
 - java -jar target/FairytaleFlavors-0.0.1-SNAPSHOT.jar
 
 
-#Run Spring Boot app using Eclipse
+# Run Spring Boot app using Eclipse
 - Alternatively, any IDE could be used to run the FairytaleFlavorsApplication.
 
 
-#SampleRequests(Postman recommended):
-##CreateRecipe:
-###SampleRequest:
--http://localhost:8080/createRecipe
--RequestBody:
+# SampleRequests(Postman recommended):
+## CreateRecipe:
+### SampleRequest:
+- http://localhost:8080/createRecipe
+- RequestBody:
 {
     "recipeName":"Kabab",
     "isVegetarian":"true",
@@ -27,11 +27,11 @@
     "ingredients":["oil", "onion"],
     "cookingInstructions":["add oil", "add onion"]
 }
--Authorization:Basic Auth
--Username:USER
--Password:USER
+- Authorization:Basic Auth
+- Username:USER
+- Password:USER
 
-###SampleResponse:
+### SampleResponse:
 {
     "id": 3,
     "recipeName": "Kabab",
@@ -48,14 +48,14 @@
     ]
 }
 
-###StatusCode:
+### StatusCode:
 - 201 created
 
-##GetRecipeById:
-###SampleRequest:
--http://localhost:8080/getRecipeById?id=3
+## GetRecipeById:
+### SampleRequest:
+- http://localhost:8080/getRecipeById?id=3
 
-###SampleResponse(if data is present inside the database wih given id):
+### SampleResponse(if data is present inside the database wih given id):
 {
     "id": 3,
     "recipeName": "Kabab",
@@ -72,21 +72,21 @@
     ]
 }
 
-###status code:
+### status code:
 - 200 Ok
 
-###SampleResponse(if data is not present inside the database wih given id):
+### SampleResponse(if data is not present inside the database wih given id):
 {
     "statusCode": 404,
     "timestamp": "2021-09-24T12:27:22.5875773",
     "message": "Recipe Not Found with Id: 3"
 }
 
-##GetRecipeByName:
-###SampleRequest:
--http://localhost:8080/getRecipeByName?recipeName=Kabab
+## GetRecipeByName:
+### SampleRequest:
+- http://localhost:8080/getRecipeByName?recipeName=Kabab
 
-###SampleResponse:
+### SampleResponse:
 {
     "id": 2,
     "recipeName": "Kabab",
@@ -103,11 +103,11 @@
     ]
 }
 
-##GetRecipeByType:
-###SampleRequest:
--http://localhost:8080/getRecipeByType?isVegetarian=true
+## GetRecipeByType:
+### SampleRequest:
+- http://localhost:8080/getRecipeByType?isVegetarian=true
 
-###SampleResponse:
+### SampleResponse:
 [
     {
         "id": 2,
@@ -141,11 +141,11 @@
     }
 ]
 
-##GetRecipeByServingSize:
-###SampleRequest:
--http://localhost:8080/getRecipeByServingSize?servingSize=4
+## GetRecipeByServingSize:
+### SampleRequest:
+- http://localhost:8080/getRecipeByServingSize?servingSize=4
 
-###SampleResponse:
+### SampleResponse:
 [
     {
         "id": 2,
@@ -179,11 +179,11 @@
     }
 ]
 
-##GetRecipeList:
-###SampleRequest:
+## GetRecipeList:
+### SampleRequest:
 - http://localhost:8080/getRecipeList
 
-###SampleResponse:
+### SampleResponse:
 [
     {
         "id": 2,
@@ -232,11 +232,11 @@
     }
 ]
 
-##UpdateRecipeById:
-###SampleRequest:
+## UpdateRecipeById:
+### SampleRequest:
 - http://localhost:8080/UpdateRecipeById
 
-###RequestBody:
+### RequestBody:
 {
     "id":"2",
     "recipeName": "Kheer"
@@ -258,19 +258,19 @@
     ]
 }
 
-##DeleteRecipeById:
-###SampleRequest:
+## DeleteRecipeById:
+### SampleRequest:
 - http://localhost:8080/deleteRecipeById?id=2
 
-###Basic Auth:
+### Basic Auth:
 - USER, USER
 
-###SampleResponse:
+### SampleResponse:
 - Deleted Id: 2
 
-##Database console link:
+## Database console link:
 - http://localhost:8080/h2-console
-##configurations:
+## configurations:
 - JDBC URL: jdbc:h2:mem:testdb
 - User Name: sa
 
