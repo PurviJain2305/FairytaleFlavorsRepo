@@ -5,7 +5,7 @@
 
 # How to run
 ### Build Spring Boot Project with Maven
-- clone the project
+- git clone https://github.com/PurviJain2305/FairytaleFlavorsRepo.git
 - cd FairytaleFlavors
 - mvn install
 - java -jar target/FairytaleFlavors-0.0.1-SNAPSHOT.jar
